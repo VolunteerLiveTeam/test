@@ -1,5 +1,7 @@
 pipeline {
-  agent any
+  agent {
+    label 'vivet'
+  }
   stages {
     stage('Docker Build') {
       steps {
