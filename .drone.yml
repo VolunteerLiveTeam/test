@@ -4,4 +4,4 @@ pipeline:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     commands:
-      - docker build  -t vlt/helloworld:v${DRONE_BUILD_NUMBER} .
+      - docker build -t vlt/helloworld:v${DRONE_BUILD_NUMBER} .
