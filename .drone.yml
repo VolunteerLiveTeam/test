@@ -1,7 +1,7 @@
 pipeline:
-  test:
-    image: hello-world
   build:
-    image: plugins/docker
-    repo: vlt/test
-    tags: latest
+    image: docker
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    commands:
+      - docker build  -t vlt/helloworld:v${DRONE_BUILD_NUMBER} .
