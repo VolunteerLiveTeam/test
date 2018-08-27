@@ -1,5 +1,7 @@
 pipeline:
-  build:
-    image: plugins/docker
-    repo: vlt/test
-    tags: latest
+  - test:
+    image: hello-world
+  - build:
+      image: plugins/docker
+      repo: vlt/test
+      tags: latest
